@@ -1,0 +1,81 @@
+/* la clase flexbox_uno es la clase dl padre*/
+.flexbox_uno{
+    /* Por defecto los elementos div tiene un display block. */
+    /* Para que los elemtos se visualicen uno al lado del 
+    /* otro, en el div padre se tiene que cambiar la prodiedad 
+    /* de display block por display flex. */
+    /* La propiedad de display flex aplica solo para los hijos directos*/
+    display: flex;
+    /*Por defecto flex tiene la propiedad flex-direction como row */
+    /*osea que se van a mostrar los elementos en fila*/
+    /* Si se cambia la propiedd flex_direction a column, se meuestran */
+    /* los elemntos en columna */
+    /* La propiedad flex-nowrap hace que los elementos esten todos en la */
+    /* misma fila, si se quiere que cuando un elemento que ya no quepa */
+    /* dentro del limite de la pantalla, se ubique debajo de los demas */
+    /* se tiene que modificar el nowrap por wrap, esta propiedad es del elemto padre  */
+    flex-wrap: wrap;
+}
+
+
+
+
+/* La clase box_uno es la clase de los hijos de flexbox_uno*/
+.box_uno{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 1px solid red;
+    /* Si se cuenta con mas elementos hijos de los que caben en la pantalla */
+    /* por defectos estos se van a reducir lo max para mostrse todos en fila o columna. */
+    /* Si no se quiere que los elementos cambien de tamaño se unsa en los */
+    /* div hijos con padres con diplay flex la propiedad flex-shrink */
+    /* flex-shrink recibe valores entre 0 y uno, siendo 1 igual a 100% flexible */
+    /* y 0 0% flexible */
+}
+
+
+
+/* la clase flexbox_dos es la clase dl padre*/
+
+/* alineacion horizontal*/
+/* flex-start: para alinear todos los elementos hacia el inicio del espacio */
+/* flex-end: para alinear todos los elementos hacia el final, a la derecha. */
+/* disponible */
+/* center: para alinear todos los elementos al centro del espacio disponible. */
+/* space-between: para distribuir los elementos con un espacio proporcional e */
+/* igual entre ellos.*/
+/* space-evenly: para distribuir los elementos con un espacio proporcional e */
+/* igual entre ellos (incluyendo el primer y último elementos con respecto a */
+/* los extremos del espacio disponible). */
+/* space-around: similar a space-evenly pero tanto en el primero como en el */
+/* último elemento, el espacio hacia los extremos es la mitad del espacio */
+/* usado entre los elementos. */
+
+
+.flexbox_dos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+}
+
+
+
+
+/* La clase box_dos es la clase de los hijos de flexbox_uno*/
+.box_dos{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: center;  
+}
+.box_grandchild{
+    width: 10px;
+    height: 10px;
+    border: 1px solid blue;
+}
